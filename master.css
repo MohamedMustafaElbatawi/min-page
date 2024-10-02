@@ -1,0 +1,433 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* *,
+*:before,
+*:after {
+    box-sizing: inherit;
+} */
+/* body {
+    background-color: #99a10050;
+    background-color: #00030050;
+    background-image: linear-gradient(to right, #01022d, #000);
+    background: linear-gradient(to right, #000004e5, #06040478 30%),url(image/pexels-adria-masi-461420600-27962178.jpg) ;
+    background-color: #dad3f8;
+    /* background: linear-gradient(#111, #222); */
+/* } */
+
+.all {
+    width: 100%;
+    height: 100vh;
+    /* background-image: linear-gradient(to left, #111, #222); */
+    position: relative;
+}
+
+.all::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgb(37, 85, 127);
+    transform: translate(340px, 200px);
+    bottom: 260px;
+    left: 500px;
+    z-index: -1;
+}
+
+.all::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgb(37, 85, 127);
+    transform: translate(-375px, -100px);
+    left: 415px;
+    top: 225px;
+    z-index: -1;
+}
+
+.container {
+    /* position: fixed; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+header {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 12;
+    box-shadow: 1px 1px 22px red;
+}
+
+header .logo-one {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 10px;
+    color: #FFF;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    color: #FFF;
+    transition: .5s;
+    position: relative;
+}
+
+header ul li a:hover {
+    color: #111;
+}
+
+header ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #111;
+    transform: scalex(0);
+    transition: .4s;
+    width: 100%;
+    transform-origin: left;
+}
+
+header ul li a:hover::before {
+    transform: scalex(1);
+
+}
+
+
+.container img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+
+
+
+
+.all .reverse-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    height: 100vh;
+}
+
+
+.reverse-header .left {
+    z-index: 14;
+    width: 600px;
+    margin-left: 10px;
+}
+
+.reverse-header .left h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #f08080;
+}
+
+.reverse-header .left p {
+    font-size: 14px;
+    width: 400px;
+    color: #FFF;
+}
+
+.reverse-header .left input {
+    margin-top: 15px;
+    width: 80px;
+    height: 42px;
+    font-size: 26px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #FFF;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.reverse-header .left input:hover {
+    background: #ccc;
+}
+
+
+
+.reverse-header .right {
+    z-index: 12;
+    width: 300px;
+    border: 3px solid red;
+    padding: 10px 15px 10px 15px;
+    border-radius: 12px;
+}
+.reverse-header .right h3 {
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, red, #f08080);
+    margin-bottom: 15px;
+}
+.reverse-header .right .fild {
+    width: 100%;
+    height: 35px;
+    margin: 20px 0;
+    position: relative;
+
+}
+.reverse-header .right .fild input {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    outline: none;
+    border: 2px solid #CCC;
+    color: #FFF;
+    background: transparent;
+}
+.reverse-header .right .fild label {
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    font-size: 14px;
+    transition: .3s;
+    color: #FFF;
+}
+.reverse-header .fild input:focus+label {
+    transform: translatey(-80%);
+    left: 18px;
+    padding: 0 7px;
+    color: #000000;
+    background: #FFF;
+}
+
+
+
+.reverse-header .reverse-two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.reverse-header .reverse-two a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s;
+}
+.reverse-header .reverse-two a:hover{
+    text-decoration: underline;
+    color: #000000;
+}
+
+
+
+.reverse-header button{
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+}
+.reverse-header button input{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background: #FFF;
+    transition: .1s;
+    cursor: pointer;
+
+}
+.reverse-header button input:hover{
+    background: #CCC;
+}
+
+/* br */
+
+
+
+
+
+.under-two{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin:40px  auto;
+}
+
+
+
+.under-two .one{
+    border: 1px solid red;
+    width: 370px;
+    padding: 10px;
+}
+.under-two .one .title{
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    padding: 15px 10px;
+    background-image: linear-gradient(to left, red, #111);
+}
+.under-two .one img{
+    width: 100%;
+}
+.under-two .one .reverse22{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.under-two .one .reverse22 .left{
+    padding: 10px;
+    background: linear-gradient(to left, black, blue);
+    color: #FFF;
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+.under-two .one .reverse22 .right{
+    padding: 10px;
+    background: linear-gradient(to left, black, blue);
+    color: #FFF;
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.under-two .two{
+    border: 1px solid red;
+    width: 370px;
+    padding: 10px;
+}
+.under-two .two .title{
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    padding: 15px 10px;
+    background-image: linear-gradient(to left, red, #111);
+}
+.under-two .two img{
+    width: 100%;
+}
+.under-two .two .reverse22{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.under-two .two .reverse22 .left{
+    padding: 10px;
+    background: linear-gradient(to left, black, blue);
+    color: #FFF;
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+.under-two .two .reverse22 .right{
+    padding: 10px;
+    background: linear-gradient(to left, black, blue);
+    color: #FFF;
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+
+.under-two .three{
+    border: 1px solid red;
+    width: 370px;
+    padding: 10px;
+}
+.under-two .three .title{
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    padding: 15px 10px;
+    background-image: linear-gradient(to left, red, #111);
+}
+.under-two .three img{
+    width: 100%;
+}
+.under-two .three .reverse22{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.under-two .three .reverse22 .left{
+    padding: 10px;
+    background: linear-gradient(to left, black, blue);
+    color: #FFF;
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+.under-two .three .reverse22 .right{
+    padding: 10px;
+    background: linear-gradient(to left, black, blue);
+    color: #FFF;
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
